@@ -143,7 +143,7 @@ void ThreadPool::FixedThreadRunner( void* tParam )
     ThreadData& d    = *(ThreadData*)tParam;
     ThreadPool& pool = *d.pool;
 
-    SysHost::SetCurrentThreadAffinityCpuId( d.cpuId );
+    //SysHost::SetCurrentThreadAffinityCpuId( d.cpuId );
 
     const uint index = (uint)d.index;
 
@@ -179,7 +179,7 @@ void ThreadPool::GreedyThreadRunner( void* tParam )
     ThreadData& d    = *(ThreadData*)tParam;
     ThreadPool& pool = *d.pool;
 
-    SysHost::SetCurrentThreadAffinityCpuId( d.cpuId );
+    //SysHost::SetCurrentThreadAffinityCpuId( d.cpuId );
 
     for( ;; )
     {
